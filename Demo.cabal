@@ -1,0 +1,35 @@
+Name:              ROS-Demo
+Version:           0.0
+Synopsis:          I am code
+Cabal-version:     >=1.6
+Category:          Robotics
+Build-type:        Custom
+
+Executable Demo
+  Build-Depends:   base >= 4.2 && < 6,
+                   vector > 0.7,
+                   time >= 1.1,
+                   roshask == 0.1.*,
+                   ROS-std-msgs,
+                   ROS-sensor-msgs,
+                   repa-devil,
+                   repa,
+                   tuple
+  GHC-Options:     -O2
+  Hs-Source-Dirs:  src
+  Main-Is:         Main.hs
+  Other-Modules:   Demo
+
+Library
+  Build-Depends:   base >= 4.2 && < 6,
+                   vector > 0.7,
+                   time >= 1.1,
+                   roshask == 0.1.*,
+                   ROS-std-msgs,
+                   ROS-sensor-msgs,
+                   repa-devil,
+                   repa,
+                   tuple
+  GHC-Options:     -O2
+  Exposed-Modules: Demo
+  Hs-Source-Dirs:  src

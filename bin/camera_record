@@ -1,0 +1,5 @@
+#!/bin/sh
+#small shell script to save the camera data
+dest=`rosparam get /camera_record/dst`
+echo "Destination: $dest"
+rosbag record -o "$HOME/data/human/$dest/camera"  /camera/rgb/camera_info /camera/rgb/image_color /camera/depth/camera_info /camera/depth/image

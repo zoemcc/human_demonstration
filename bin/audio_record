@@ -1,0 +1,5 @@
+#!/bin/sh
+#small shell script to save the audio data
+dest=`rosparam get /audio_record/dst`
+echo "Destination: $dest"
+rosbag record -o "$HOME/data/human/$dest/audio"  /audio

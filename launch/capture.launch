@@ -1,0 +1,21 @@
+<launch>
+
+  <node name="audio_capture" pkg="audio_capture" type="audio_capture" output="screen">
+    <param name="bitrate" value="128"/>
+  </node>
+
+  <node name="audio_record" pkg="Demo" type="audio_record">
+    <param name="dst" value="test"/>
+  </node>
+
+  <include file="$(find openni_launch)/launch/openni.launch"/>
+
+  <!--
+  <node name="camera" pkg="openni_camera" type="openni_node"/>
+  -->
+
+  <node name="camera_record" pkg="Demo" type="camera_record">
+    <param name="dst" value="test"/>
+  </node>
+
+</launch>
